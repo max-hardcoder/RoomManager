@@ -1,5 +1,6 @@
 package fr.nantes.miage;
 
+import fr.nantes.miage.locaux.Salle;
 import fr.nantes.miage.reservation.*;
 import org.junit.After;
 import org.junit.BeforeClass;
@@ -20,7 +21,6 @@ public class TestReservation {
     /**
      * Initialisation des variables pour les tests
      */
-
     @BeforeClass
     public static void init() {
 
@@ -37,7 +37,7 @@ public class TestReservation {
     }
 
     /**
-     * A la fin de chaque test, vide la liste de reservation
+     * A la fin de chaque test, vide la liste de reservations
      */
     @After
     public void reinitialize() {

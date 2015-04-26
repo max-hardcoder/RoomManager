@@ -1,6 +1,8 @@
 package fr.nantes.miage.reservation;
 
 
+import fr.nantes.miage.locaux.Salle;
+
 /**
  * Created by E14D247Q on 16/03/15.
  */

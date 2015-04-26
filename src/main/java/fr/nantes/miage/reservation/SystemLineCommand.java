@@ -1,6 +1,9 @@
 package fr.nantes.miage.reservation;
 
 
+import fr.nantes.miage.locaux.Salle;
+import locaux.Batiment;
+
 import java.util.LinkedList;
 
 /**

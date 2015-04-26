@@ -1,5 +1,7 @@
-package fr.nantes.miage.reservation;
+package fr.nantes.miage.locaux;
 
+
+import locaux.Batiment;
 
 import java.util.HashMap;
 

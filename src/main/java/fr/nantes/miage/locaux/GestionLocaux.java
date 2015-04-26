@@ -1,7 +1,9 @@
-package fr.nantes.miage.reservation;
+package fr.nantes.miage.locaux;
 /**
  * Created by E14D247Q on 10/04/15.
  */
+
+import locaux.Batiment;
 
 import java.util.HashMap;
 import java.util.LinkedList;
