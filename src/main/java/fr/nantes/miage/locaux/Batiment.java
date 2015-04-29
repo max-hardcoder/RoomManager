@@ -1,6 +1,4 @@
-package locaux;
-
-import fr.nantes.miage.locaux.Salle;
+package fr.nantes.miage.locaux;
 
 import java.util.LinkedList;
 
@@ -10,7 +8,7 @@ public class Batiment {
     public final static int NOM = 0;
 
 
-    private LinkedList<Salle> listeSalle;
+    private LinkedList<Salle> salles;
     private int num;
     private String nom;
     private String adresse;
@@ -19,7 +17,7 @@ public class Batiment {
 
 
     public Batiment(int num, LinkedList<Salle> listeSalle, String nom, String adresse, String code, String ville) {
-        this.listeSalle = listeSalle;
+        this.salles = (listeSalle == null ? new LinkedList<Salle>() : listeSalle);
         this.num = num;
         this.nom = nom;
         this.adresse = adresse;
@@ -29,17 +27,22 @@ public class Batiment {
 
     public boolean ajouterSalle(Salle salle) {
 
-        return listeSalle.add(salle);
+        return salles.add(salle);
 
     }
 
+    public boolean supprimerSalle(Salle salle) {
 
-    public LinkedList<Salle> getListeSalle() {
-        return listeSalle;
+        return salles.remove(salle);
     }
 
-    public void setListeSalle(LinkedList<Salle> listeSalle) {
-        this.listeSalle = listeSalle;
+
+    public LinkedList<Salle> getSalles() {
+        return salles;
+    }
+
+    public void setSalles(LinkedList<Salle> salles) {
+        this.salles = salles;
     }
 
     public int getNum() {
@@ -83,7 +86,7 @@ public class Batiment {
     }
 
     public String toString() {
-        return "Batiment : " + num + ", Salles : " + listeSalle + " , Adresse : " + adresse + " " + codePostal + " " + ville;
+        return "Batiment : " + num + ", Salles : " + salles + " , Adresse : " + adresse + " " + codePostal + " " + ville;
 
     }
 

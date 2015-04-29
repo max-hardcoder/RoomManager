@@ -5,6 +5,8 @@ package fr.nantes.miage.reservation;
  * Created by E14D247Q on 10/04/15.
  */
 
+
+import java.util.Calendar;
 import java.util.Date;
 
 
@@ -52,6 +54,22 @@ public class Period {
         return true;
 
 
+    }
+
+
+    public double getDaysBetweenDates() {
+        double result = Double.POSITIVE_INFINITY;
+        if (date_debut != null && date_fin != null) {
+            final long MILLISECONDS_PER_DAY = 1000 * 60 * 60 * 24;
+            Calendar aCal = Calendar.getInstance();
+            aCal.setTime(date_debut);
+            long aFromOffset = aCal.get(Calendar.DST_OFFSET);
+            aCal.setTime(date_fin);
+            long aToOffset = aCal.get(Calendar.DST_OFFSET);
+            long aDayDiffInMili = (date_fin.getTime() + aToOffset) - (date_debut.getTime() + aFromOffset);
+            result = ((double) aDayDiffInMili / MILLISECONDS_PER_DAY);
+        }
+        return result;
     }
 
 
