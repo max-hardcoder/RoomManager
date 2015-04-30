@@ -1,15 +1,15 @@
 package fr.nantes.miage.locaux;
 
 
-import fr.nantes.miage.Materiel;
-import fr.nantes.miage.MaterielFixe;
-import fr.nantes.miage.Payement;
+import fr.nantes.miage.commun.Materiel;
+import fr.nantes.miage.commun.MaterielFixe;
+import fr.nantes.miage.commun.Payement;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by E14D247Q on 16/03/15.
+ * Classe qui représente une salle, qui peut etre facturée
  */
 public class Salle implements Payement {
 
@@ -45,16 +45,17 @@ public class Salle implements Payement {
 
     }
 
+    @Override
     public double payment() {
         double prix = 0;
 
         for (Materiel materiel : materiels) {
-            prix += materiel.getPrix();
+            prix += materiel.payment();
         }
 
         prix += superficie / 3;
 
-        prix += typeSalle.getPrix();
+        prix += typeSalle.payment();
 
         return prix;
     }

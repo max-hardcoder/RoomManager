@@ -1,19 +1,18 @@
 package fr.nantes.miage.demandeur;
 
-import fr.nantes.miage.Origine;
-import fr.nantes.miage.Titre;
-import fr.nantes.miage.reservation.System;
+import fr.nantes.miage.commun.System;
 
 import java.util.LinkedList;
+import java.util.List;
 
 /**
- * Created by Maxime on 26/04/2015.
+ * Classe facade qui permet de manipuler les demandeurs
  */
 public class GestionDemandeur implements ActionDemandeur, System {
 
-    private LinkedList<Demandeur> demandeurs = null;
-    private LinkedList<Titre> titresDemandeur = null;
-    private LinkedList<Origine> originesDemandeur = null;
+    private List<Demandeur> demandeurs = null;
+    private List<Titre> titresDemandeur = null;
+    private List<Origine> originesDemandeur = null;
 
     public GestionDemandeur(LinkedList<Demandeur> demandeurs) {
         this.demandeurs = (demandeurs == null ? new LinkedList<Demandeur>() : demandeurs);
@@ -33,11 +32,6 @@ public class GestionDemandeur implements ActionDemandeur, System {
         titresDemandeur.add(new Titre("Association", 10.0));
         titresDemandeur.add(new Titre("Entreprise", 20.0));
 
-        // HashMap<String, Double> aa = new HashMap<>();
-
-        //  aa.get
-
-
     }
 
     @Override
@@ -51,7 +45,7 @@ public class GestionDemandeur implements ActionDemandeur, System {
     }
 
 
-    public LinkedList<Titre> getTitresDemandeur() {
+    public List<Titre> getTitresDemandeur() {
         return titresDemandeur;
     }
 
@@ -59,7 +53,7 @@ public class GestionDemandeur implements ActionDemandeur, System {
         this.titresDemandeur = titresDemandeur;
     }
 
-    public LinkedList<Demandeur> getDemandeurs() {
+    public List<Demandeur> getDemandeurs() {
         return demandeurs;
     }
 
@@ -67,7 +61,7 @@ public class GestionDemandeur implements ActionDemandeur, System {
         this.demandeurs = demandeurs;
     }
 
-    public LinkedList<Origine> getOriginesDemandeur() {
+    public List<Origine> getOriginesDemandeur() {
         return originesDemandeur;
     }
 

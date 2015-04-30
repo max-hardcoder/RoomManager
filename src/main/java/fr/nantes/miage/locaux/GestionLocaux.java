@@ -1,14 +1,13 @@
 package fr.nantes.miage.locaux;
-/**
- * Created by E14D247Q on 10/04/15.
- */
 
-
-import fr.nantes.miage.MaterielFixe;
-import fr.nantes.miage.reservation.System;
+import fr.nantes.miage.commun.MaterielFixe;
+import fr.nantes.miage.commun.System;
 
 import java.util.LinkedList;
 
+/**
+ * Classe qui représente la classe facade permettant de manipuler les locaux ( batiments, salles et type salle)
+ */
 public class GestionLocaux implements ActionLocal, System {
 
     private LinkedList<Batiment> batiments = new LinkedList<>();
@@ -152,10 +151,11 @@ public class GestionLocaux implements ActionLocal, System {
 
 
         //Check si res déjà faites dans la salle à supp
+        //libere materiel
 
         //   if ( !estReserve(salle) ){
         return salles.remove(salle);
-        //   }
+        //     }
 
 
     }

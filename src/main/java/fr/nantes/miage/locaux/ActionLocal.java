@@ -1,14 +1,14 @@
 package fr.nantes.miage.locaux;
 
 
-import fr.nantes.miage.MaterielFixe;
+import fr.nantes.miage.commun.MaterielFixe;
 
 import java.util.LinkedList;
 import java.util.List;
 
 /**
- * Created by E14D247Q on 10/04/15.
- */
+ * Interface qui permet de représenter les actions liées aux locaux
+ * */
 public interface ActionLocal {
 
 

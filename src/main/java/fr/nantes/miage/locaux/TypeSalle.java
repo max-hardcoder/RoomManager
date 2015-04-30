@@ -1,9 +1,11 @@
 package fr.nantes.miage.locaux;
 
+import fr.nantes.miage.commun.Payement;
+
 /**
- * Created by Maxime on 27/04/2015.
+ * Classe qui représente un type de salle
  */
-public class TypeSalle {
+public class TypeSalle implements Payement {
 
     private String type;
     private int prix;
@@ -31,6 +33,11 @@ public class TypeSalle {
         }
 
         return false;
+    }
+
+    @Override
+    public double payment() {
+        return prix;
     }
 
 

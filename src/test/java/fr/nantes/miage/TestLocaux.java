@@ -1,5 +1,6 @@
 package fr.nantes.miage;
 
+import fr.nantes.miage.commun.MaterielFixe;
 import fr.nantes.miage.locaux.Batiment;
 import fr.nantes.miage.locaux.GestionLocaux;
 import fr.nantes.miage.locaux.Salle;

@@ -1,22 +1,19 @@
 package fr.nantes.miage.reservation;
 
 
-import fr.nantes.miage.Manifestation;
-import fr.nantes.miage.MaterielMobile;
+import fr.nantes.miage.commun.MaterielMobile;
 import fr.nantes.miage.demandeur.Demandeur;
 import fr.nantes.miage.locaux.Salle;
 
 import java.util.LinkedList;
+import java.util.List;
 
 /**
- * Classe qui permet de gerer les reservations
+ * Classe qui représente la facade qui permet de manipuler les réservations
  */
-public class GestionReservation implements ActionReservation {
+public class GestionReservation implements ActionReservation, fr.nantes.miage.commun.System {
 
-    /**
-     * Liste de reservations
-     */
-    private LinkedList<Reservation> reservations = new LinkedList<>();
+    private List<Reservation> reservations = new LinkedList<>();
 
 
     @Override
@@ -28,6 +25,13 @@ public class GestionReservation implements ActionReservation {
         return false;
 
     }
+
+    @Override
+    public void initialize() {
+
+        return;
+    }
+
 
     @Override
     public boolean ajouterReservation(Salle s1, Period periode, int montant, Manifestation manifestation, Demandeur demandeur) {
@@ -45,6 +49,19 @@ public class GestionReservation implements ActionReservation {
         }
         return false;
     }
+
+
+    @Override
+    public boolean estReserve(Salle s1) {
+
+        for (Reservation r : reservations) {
+
+            if (r.getSalle().equals(s1)) return true;
+
+        }
+        return false;
+    }
+
 
     @Override
     public boolean annulerReservation(Reservation resa) {
@@ -107,7 +124,7 @@ public class GestionReservation implements ActionReservation {
     }
 
 
-    public LinkedList<Reservation> getReservations() {
+    public List<Reservation> getReservations() {
         return reservations;
     }
 

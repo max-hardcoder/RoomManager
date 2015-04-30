@@ -1,6 +1,10 @@
 package fr.nantes.miage;
 
+import fr.nantes.miage.commun.EasyDate;
+import fr.nantes.miage.commun.MaterielMobile;
 import fr.nantes.miage.demandeur.Demandeur;
+import fr.nantes.miage.demandeur.Origine;
+import fr.nantes.miage.demandeur.Titre;
 import fr.nantes.miage.locaux.Salle;
 import fr.nantes.miage.locaux.TypeSalle;
 import fr.nantes.miage.reservation.*;

@@ -1,9 +1,9 @@
 package fr.nantes.miage.reservation;
 
 
-import fr.nantes.miage.Manifestation;
-import fr.nantes.miage.MaterielMobile;
-import fr.nantes.miage.Payement;
+import fr.nantes.miage.commun.Materiel;
+import fr.nantes.miage.commun.MaterielMobile;
+import fr.nantes.miage.commun.Payement;
 import fr.nantes.miage.demandeur.Demandeur;
 import fr.nantes.miage.locaux.Salle;
 
@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by E14D247Q on 16/03/15.
+ * Classe représentant une reservation qui peut être facturée
  */
 public class Reservation implements Payement {
 
@@ -20,8 +20,6 @@ public class Reservation implements Payement {
     private Period periode;
     private Salle salle;
     private List<MaterielMobile> materielMobiles;
-
-
     private Manifestation manifestation;
     private Demandeur demandeur;
 
@@ -45,7 +43,14 @@ public class Reservation implements Payement {
 
 
     public double payment() {
-        return salle.payment() * periode.getDaysBetweenDates() + manifestation.getPrix() + demandeur.getOrigine().getPrix() + demandeur.getTitre().getPrix();
+
+        Double prix = 0.0;
+
+        for (Materiel materiel : materielMobiles) {
+            prix += materiel.payment();
+        }
+
+        return prix + salle.payment() * periode.getDaysBetweenDates() + manifestation.payment() + demandeur.getOrigine().payment() + demandeur.getTitre().payment();
     }
 
     public int getMontant() {

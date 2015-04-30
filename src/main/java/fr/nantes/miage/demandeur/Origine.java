@@ -1,17 +1,26 @@
-package fr.nantes.miage;
+package fr.nantes.miage.demandeur;
+
+import fr.nantes.miage.commun.Payement;
 
 /**
- * Created by Maxime on 28/04/2015.
+ * Classe qui représente un une origine
  */
-public class Titre {
+public class Origine implements Payement {
 
     private String nom;
     private Double prix;
 
 
-    public Titre(String nom, Double prix) {
+    public Origine(String nom, Double prix) {
         this.nom = nom;
         this.prix = prix;
+    }
+
+
+    @Override
+    public double payment() {
+
+        return prix;
     }
 
     public Double getPrix() {

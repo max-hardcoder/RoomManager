@@ -1,7 +1,7 @@
 package fr.nantes.miage.demandeur;
 
 /**
- * Created by Maxime on 26/04/2015.
+ * Interface qui permet de manipuler les demandeurs
  */
 public interface ActionDemandeur {
 

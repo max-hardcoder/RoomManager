@@ -1,17 +1,17 @@
-package fr.nantes.miage;
+package fr.nantes.miage.commun;
 
 /**
- * Created by Maxime on 28/04/2015.
+ * Classe abstraite qui permet de representer un materiel, qui peut être facturé
  */
 public abstract class Materiel implements Payement {
 
     protected int numeroMateriel;
     protected double prix;
-    protected String descritpion;
+    protected String description;
 
     public Materiel(int numeroMateriel, double prix, String descritpion) {
         this.numeroMateriel = numeroMateriel;
-        this.descritpion = descritpion;
+        this.description = descritpion;
         this.prix = prix;
     }
 
@@ -34,12 +34,12 @@ public abstract class Materiel implements Payement {
         this.numeroMateriel = numeroMateriel;
     }
 
-    public String getDescritpion() {
-        return descritpion;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDescritpion(String descritpion) {
-        this.descritpion = descritpion;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
 

@@ -2,11 +2,10 @@ package fr.nantes.miage.locaux;
 
 import java.util.LinkedList;
 
+/**
+ * Classe qui représente un batiment
+ */
 public class Batiment {
-
-
-    public final static int NOM = 0;
-
 
     private LinkedList<Salle> salles;
     private int num;

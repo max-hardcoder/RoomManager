@@ -33,7 +33,7 @@ public class TestDemandeur {
         gestionDemandeur = new GestionDemandeur(null);
         gestionDemandeur.initialize();
 
-        demandeur = new Demandeur("People", gestionDemandeur.getTitresDemandeur().getFirst(), gestionDemandeur.getOriginesDemandeur().getFirst());
+        demandeur = new Demandeur("People", gestionDemandeur.getTitresDemandeur().get(0), gestionDemandeur.getOriginesDemandeur().get(0));
 
 
     }

@@ -1,19 +1,19 @@
 package fr.nantes.miage.reservation;
 
 
-/**
- * Created by E14D247Q on 10/04/15.
- */
-
-
 import java.util.Calendar;
 import java.util.Date;
 
 
+/**
+ * Classe qui représente  une période comprise de deux dates
+ */
+
+
 public class Period {
 
-    public Date date_debut;
-    public Date date_fin;
+    private Date date_debut;
+    private Date date_fin;
 
 
     private Period(Date date_debut, Date date_fin) {

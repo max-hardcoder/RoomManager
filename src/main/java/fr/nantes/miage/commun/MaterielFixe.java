@@ -1,7 +1,7 @@
-package fr.nantes.miage;
+package fr.nantes.miage.commun;
 
 /**
- * Created by Maxime on 28/04/2015.
+ * Classe qui représente un materiel fixe
  */
 public class MaterielFixe extends Materiel {
 

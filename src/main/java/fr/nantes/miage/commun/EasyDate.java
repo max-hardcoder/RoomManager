@@ -1,7 +1,9 @@
-package fr.nantes.miage.reservation;
+package fr.nantes.miage.commun;
 
 /**
- * Created by E14D247Q on 10/04/15.
+ * Classe qui permet de créer une date plus facilement
+ * Création du fait que le constructeur de date est devenu deprecie
+ * donc utilisation de calendar
  */
 
 import java.util.Calendar;

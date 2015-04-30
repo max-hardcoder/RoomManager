@@ -3,7 +3,7 @@ package fr.nantes.miage.reservation;
 import java.util.logging.*;
 
 /**
- * Created by Maxime on 26/04/2015.
+ * Classe d'outils
  */
 public class Utils {
 

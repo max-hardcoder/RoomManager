@@ -1,10 +1,7 @@
 package fr.nantes.miage.demandeur;
 
-import fr.nantes.miage.Origine;
-import fr.nantes.miage.Titre;
-
 /**
- * Created by Maxime on 26/04/2015.
+ * Classe qui représente un demandeur
  */
 public class Demandeur {
 
